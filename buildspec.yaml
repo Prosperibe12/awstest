@@ -28,7 +28,7 @@ phases:
   post_build:
     commands:
       - echo Starting Post Build Stage......
-      - export DOCKER_CONTAINER_NAME=awstest-demo
+      - export DOCKER_CONTAINER_NAME=giraffeconn
       - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - echo Generated imagedefinitions.json
       - cat imagedefinitions.json
