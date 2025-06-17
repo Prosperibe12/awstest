@@ -6,7 +6,8 @@ phases:
   pre_build:
     commands:
       # Run test
-      - echo Starting Pre Build phase......
+      - echo Starting Pre Build phase...... 
+      - echo $DOCKERHUB_PASS | docker login -u $DOCKERHUB_USER --password-stdin
       - pip install -r requirements.txt
       - python manage.py test
   build: 
