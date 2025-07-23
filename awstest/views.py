@@ -6,6 +6,6 @@ from rest_framework import status
 
 class APIHealthCheck(APIView):
   def get(self, request):
-    return Response({"status": "corrected"}, status=status.HTTP_200_OK)
+    return Response({"status": "fixed"}, status=status.HTTP_200_OK)
 
   
